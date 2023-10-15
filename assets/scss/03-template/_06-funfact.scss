@@ -1,0 +1,32 @@
+/*----------------------------------------*/
+/*  2.6 - Funfact Style CSS
+/*----------------------------------------*/
+.funfact{
+  padding: 100px 0 95px;
+    &-inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & .odometer{
+            font-size: 100px;
+            font-weight: 600;
+            line-height: 1;
+            color: #eeeeee;
+            padding-right: 3px;
+            overflow: hidden;
+        }
+    }
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & .text{
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &-single{
+        position: relative;
+    }
+}

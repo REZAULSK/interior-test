@@ -1,0 +1,171 @@
+/*----------------------------------------*/
+/*  2.4 - Service Style CSS
+/*----------------------------------------*/
+.service {
+    &-heading-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    & .heading {
+        width: 520px;
+    }
+    &-tabs {
+        margin-top: 50px;
+        & .nav {
+            &-tabs{
+                border-bottom: 0px;
+                display: flex;
+                gap: 10px;
+            }
+            &-item{
+                flex: 0 0 auto;
+                width: 19.3%;
+                min-height: 100px;
+                @media #{$desktop-device, $laptop-device} {
+                    width: 19.1%;
+                }
+                @media #{$tablet-device} {
+                    width: 18.8%;
+                }
+            }
+            &-link{
+                border: 0px;
+                border-radius: 0px;
+                background: $white;
+                gap: 15px;
+                box-shadow: 1px 1px 6px -3px rgba(0, 0, 0, 0.3);
+                height: 100%;
+                padding: 18px;
+                
+                @media #{$tablet-device} {
+                    padding: 12px;
+                }
+                &.active{
+                    border-bottom: 3px solid $primary;
+                    box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.3);
+
+                    & .nav-title{
+                        color: $primary;
+                    }
+
+                    & .nav-icon-group{
+                        & .first{
+                            display: block;
+                        }
+                        & .second{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &-icon{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                &-group{
+                    position: relative;
+                    margin-left: 8px;
+                    &::after{
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        background: rgba(213,213,213,0.3);
+                        border-radius: 100%;
+                        position: absolute;
+                        left: -10px;
+                        bottom: -10px;
+                    }
+                    & img{
+                        z-index: 9;
+                        position: relative;
+                    }
+                    & .first{
+                        display: none;
+                    }
+                }
+                &-number{
+                    font-weight: 700;
+                    font-family: $dm;
+                    font-size: 48px;
+                    color: rgba(213,213,213,0.3);
+                    line-height: 1;
+                    @media #{$tablet-device} {
+                        font-size: 36px;
+                    }
+                }
+            }
+            &-title{
+                display: block;
+                margin-top: 15px;
+                font-size: 16px;
+                font-weight: 700;
+                
+                @media #{$tablet-device, $large-mobile} {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    & .tab {
+        &-content {
+            margin-top: 30px;
+        }
+        &-pane {
+            position: relative;
+            & .image {
+                &-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+                &-one {
+                    flex: 0 0 auto;
+                    width: 73%;
+                    @media #{$tablet-device} {
+                        width: 60%;
+                    }
+                }
+                &-content {
+                    background: $white;
+                    padding: 40px;
+                    margin-left: -40px;
+                    
+                    @media #{$tablet-device, $large-mobile} {
+                        margin-left: 10px;
+                        padding: 15px;
+                    }
+                    & .icon {
+                        position: relative;
+                        &::after {
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            background: rgba(213,213,213,0.3);
+                            border-radius: 100%;
+                            position: absolute;
+                            left: -10px;
+                            bottom: -10px;
+                        }
+                    }
+                    & .title {
+                        font-weight: 700;
+                        margin: 20px 0 15px;
+                        @media #{$tablet-device, $large-mobile} {
+                            margin: 15px 0 10px;
+                        }
+                    }
+                    & .text {
+                        @media #{$tablet-device, $large-mobile} {
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    & .more-btn {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
